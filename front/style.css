@@ -1,0 +1,145 @@
+
+    /* Define uma fonte padrão e cor de fundo leve */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* Fonte moderna padrão do sistema */
+      background-color: #f8fafc; /* Cinza bem claro de fundo */
+    }
+
+    /* Seção principal (hero) da página */
+    .hero {
+      min-height: 70vh; /* Altura mínima: 70% da altura da tela */
+      display: flex; /* Usa flexbox pra centralizar conteúdo */
+      align-items: center; /* Alinha verticalmente no centro */
+      background: linear-gradient(135deg, #0d6efd 0%, #0ea5e9 100%); /* Degradê azul */
+      color: #fff; /* Texto branco */
+    }
+
+    /* Título principal da hero */
+    .hero-title {
+      font-size: 2.5rem; /* Tamanho do texto */
+      font-weight: 700;  /* Deixa bem negrito */
+    }
+
+    /* Subtítulo da hero */
+    .hero-subtitle {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Botão principal personalizado (em cima do .btn do Bootstrap) */
+    .btn-cta {
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px; /* Deixa o botão “oval” */
+      font-weight: 600;
+    }
+
+    /* Seções padrão */
+    section {
+      padding: 4rem 0; /* Espaçamento vertical */
+    }
+
+    /* Seção com fundo branco destacado */
+    .section-white {
+      background-color: #ffffff;
+    }
+
+    /* Cartões de informação (sobre / rotas / benefícios) */
+    .info-card {
+      border-radius: 1rem;            /* Bordas arredondadas */
+      border: 1px solid #e5e7eb;      /* Borda cinza suave */
+      padding: 1.5rem;                /* Espaçamento interno */
+      background-color: #ffffff;      /* Fundo branco */
+      height: 100%;                   /* Preenche a altura da coluna */
+    }
+
+    /* Destaque no título do card */
+    .info-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Seção de contato com leve destaque */
+    .section-highlight {
+      background-color: #e0f2fe; /* Azul bem claro */
+    }
+   
+    /* WRAPPER DO VÍDEO DA VAN */
+    .video-van-wrapper {
+      text-align: left;          /* Centraliza acima do texto */
+      margin-bottom: 1.2rem;       /* Espaço entre vídeo e o título */
+      overflow: hidden;            /* Remove bordas indesejadas */
+      display: flex;
+      justify-content: left;
+    }
+
+    /* ESTILO DO VÍDEO */
+    .video-van {
+      width: 130px;                /* Tamanho ideal para hero */
+      height: auto;                /* Mantém proporção */
+      border-radius: 16px;         /* Bordas arredondadas modernas */
+      opacity: 0.98;               /* Integra com o fundo */
+      mix-blend-mode: screen;      /* FUNDAMENTAL: mistura com o degradê */
+      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.3)); /* Sombra bonita */
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* AO PASSAR O MOUSE (opcional) */
+    .video-van-wrapper:hover .video-van {
+      opacity: 1;                   /* Fica mais vivo ao hover */
+      transform: scale(1.03);       /* Leve zoom */
+    }
+ 
+  /* === IMAGEM DA VAN INTEGRADA AO FUNDO === */
+      .hero-image-wrapper {
+        position: relative;           /* Permite controlar posicionamento */
+        max-width: 530px;             /* Tamanho ideal do hero */
+        margin: auto;                 /* Centraliza em telas pequenas */
+      }
+
+      .hero-van {
+        width: 100%;                  
+        height: auto;                 
+        border-radius: 24px;          /* Bordas arredondadas suaves, estilo premium */
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35); /* Sombra moderna */
+        opacity: 0.99;                /* Leve transparência para mesclar com o fundo */
+        backdrop-filter: blur(1px);   /* Integrar com o degradê */
+        mix-blend-mode: lighten;      /* FUNDAMENTAL: faz a imagem “misturar” com o fundo */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      /* EFEITO AO PASSAR O MOUSE */
+      .hero-image-wrapper:hover .hero-van {
+        transform: scale(1.03);       /* Zoom suave */
+        opacity: 1;                   /* Fica mais sólida ao passar o mouse */
+      }
+
+
+    /* INICIO - Imagem dos serviços na seção "Sobre" */
+      .servico-img {
+        width: 180px;                /* Tamanho fixo, pequeno e elegante */
+        height: 180px;
+        object-fit: cover;          /* Corta a imagem sem distorcer */
+        border-radius: 50%;         /* Deixa circular */
+        margin-bottom: 1rem;        /* Espaço entre a imagem e o título */
+        box-shadow: 0 6px 16px rgba(15, 23, 42, 0.15); /* Sombra suave */
+        border: 3px solid #e0f2fe;  /* Bordinha combinando com o tema azul */
+      }
+
+        /* Se quiser dar um leve efeito ao passar o mouse */
+        .info-card:hover .servico-img {
+          transform: translateY(-4px);
+          transition: transform 0.2s ease;
+        }
+    /* FIM - Imagem dos serviços na seção "Sobre" */    
+
+
+    /* Rodapé simples */
+    footer {
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;      /* Cinza azulado */
+      background-color: #ffffff;
+      border-top: 1px solid #e5e7eb;
+    }
