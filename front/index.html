@@ -20,21 +20,23 @@
     <div class="container">
       <!-- "Logo" simples, só texto por enquanto -->
       <a class="navbar-brand fw-bold text-primary" href="#">
-        MinhaVan<span class="text-info">Escolar</span> <!-- Marca com duas cores -->
+        Tia<span class="text-info">Dani</span> <!-- Marca com duas cores -->
       </a>
 
-      <!-- Botão que aparece no mobile pra abrir/fechar o menu -->
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-bs-toggle="collapse"           <!-- Diz ao Bootstrap que vai colapsar/expandir -->
-        data-bs-target="#navbarSupportedContent" <!-- Id do menu que será aberto -->
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Alternar navegação"
-      >
-        <span class="navbar-toggler-icon"></span> <!-- Ícone padrão (3 risquinhos) -->
-      </button>
+    <!-- Botão que aparece no mobile pra abrir/fechar o menu -->
+<button 
+  class="navbar-toggler" 
+  type="button" 
+  data-bs-toggle="collapse" 
+  data-bs-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent"
+  aria-expanded="false"
+  aria-label="Alternar navegação"
+>
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+
 
       <!-- Área que "colapsa" no mobile (links do menu) -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -51,7 +53,7 @@
             <a class="nav-link" href="#rotas">Rotas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contato">Contato</a>
+            <a class="nav-link" href="#whatsapp">Contato</a>
           </li>
         </ul>
       </div>
@@ -79,8 +81,8 @@
             Levamos seu filho para a escola com responsabilidade, comunicação clara com os responsáveis e rotas planejadas.
           </p>
           <!-- Botão que leva direto para o formulário de contato -->
-          <a href="#contato" class="btn btn-warning btn-cta">
-            Quero um orçamento
+          <a href="#whatsapp" class="btn btn-warning btn-cta">
+            Entrar em contato via WhatsApp
           </a>
           <!-- Texto menor para reforçar confiança -->
           <p class="mt-3 mb-0">
@@ -196,117 +198,30 @@
     </div>
   </section>
 
-  <!-- SEÇÃO CONTATO / FORMULÁRIO -->
-  <section id="contato" class="section-highlight">
-    <div class="container">
-      <div class="row justify-content-center">
-        <!-- Coluna centralizada com largura máxima de 7 colunas em telas grandes -->
-        <div class="col-lg-7">
-          <h2 class="fw-bold mb-3 text-center">Solicite um orçamento</h2>
-          <p class="text-muted text-center mb-4">
-            Preencha seus dados que entraremos em contato pelo WhatsApp para entender sua necessidade
-            e explicar valores, horários e rotas.
-          </p>
+  <!-- SEÇÃO CONTATO VIA WHATSAPP -->
+ <section id="whatsapp" class="whatsapp-section">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3">Fale conosco pelo WhatsApp</h2>
+    <p class="text-muted mb-4">
+      Tire suas dúvidas, consulte rotas e solicite orçamento rapidamente.
+    </p>
 
-          <!-- Formulário de contato -->
-          <!-- method="POST": indica que vai enviar dados ao back-end -->
-          <!-- action="/contato": rota que você vai criar no Python (Flask/FastAPI) -->
-          <form id="contato-form" method="POST" action="/contato">
-            <!-- Campo: nome do responsável -->
-            <div class="mb-3">
-              <label for="nome_responsavel" class="form-label">Nome do responsável</label>
-              <input 
-                type="text" 
-                class="form-control" 
-                id="nome_responsavel" 
-                name="nome_responsavel" 
-                placeholder="Seu nome completo" 
-                required
-              >
-            </div>
-
-            <!-- Campo: nome do aluno -->
-            <div class="mb-3">
-              <label for="nome_aluno" class="form-label">Nome do aluno</label>
-              <input 
-                type="text" 
-                class="form-control" 
-                id="nome_aluno" 
-                name="nome_aluno" 
-                placeholder="Nome da criança" 
-                required
-              >
-            </div>
-
-            <!-- Linha com dois campos lado a lado (escola e bairro) -->
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="escola" class="form-label">Escola</label>
-                <input 
-                  type="text" 
-                  class="form-control" 
-                  id="escola" 
-                  name="escola" 
-                  placeholder="Nome da escola" 
-                  required
-                >
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="bairro" class="form-label">Bairro</label>
-                <input 
-                  type="text" 
-                  class="form-control" 
-                  id="bairro" 
-                  name="bairro" 
-                  placeholder="Seu bairro" 
-                  required
-                >
-              </div>
-            </div>
-
-            <!-- Campo: WhatsApp do responsável -->
-            <div class="mb-3">
-              <label for="whatsapp" class="form-label">WhatsApp</label>
-              <input 
-                type="tel" 
-                class="form-control" 
-                id="whatsapp" 
-                name="whatsapp" 
-                placeholder="(00) 90000-0000" 
-                required
-              >
-            </div>
-
-            <!-- Campo opcional: observações -->
-            <div class="mb-3">
-              <label for="observacoes" class="form-label">Observações (opcional)</label>
-              <textarea 
-                class="form-control" 
-                id="observacoes" 
-                name="observacoes" 
-                rows="3" 
-                placeholder="Horários desejados, necessidades especiais, turno (manhã/tarde), etc."
-              ></textarea>
-            </div>
-
-            <!-- Mensagem de retorno para o usuário (erro/sucesso) -->
-            <p id="msg-retorno" class="small mb-3 text-muted"></p>
-
-            <!-- Botão de envio -->
-            <button type="submit" class="btn btn-primary btn-cta w-100">
-              Enviar meus dados
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+    <a 
+      href="https://wa.me/5571996683570?text=Olá! Quero saber mais sobre o transporte escolar." 
+      target="_blank"
+      class="btn btn-success btn-whatsapp"
+    >
+      💬 Conversar no WhatsApp
+    </a>
+  </div>
+</section>
+  <!-- SEÇÃO CONTATO -->
 
   <!-- RODAPÉ -->
   <footer>
     <div class="container">
       <!-- Texto simples de direitos autorais -->
-      <p class="mb-1">&copy; 2025 MinhaVanEscolar. Todos os direitos reservados.</p>
+      <p class="mb-1">&copy; 2025 TiaDani. Todos os direitos reservados.</p>
       <!-- Campo para informar cidade / região de atendimento -->
       <p class="mb-0">
         <small>Atendendo escolas e bairros selecionados da região. Entre em contato para confirmar disponibilidade.</small>

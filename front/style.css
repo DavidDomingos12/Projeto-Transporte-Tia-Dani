@@ -5,18 +5,33 @@
       background-color: #f8fafc; /* Cinza bem claro de fundo */
     }
 
+    /* Tablet pra baixo */
+    @media (max-width: 768px) {
+      .hero-image-wrapper {
+        max-width: 400px;      /* diminui um pouco o tamanho máximo */
+        margin-bottom: 1.5rem; /* dá um respiro abaixo da imagem */
+      }
+    }
+
+    /* Celular pequeno */
+    @media (max-width: 480px) {
+      .hero-image-wrapper {
+        max-width: 280px;   /* mais compacto */
+      }
+    }
+
     /* Seção principal (hero) da página */
     .hero {
       min-height: 70vh; /* Altura mínima: 70% da altura da tela */
       display: flex; /* Usa flexbox pra centralizar conteúdo */
       align-items: center; /* Alinha verticalmente no centro */
-      background: linear-gradient(135deg, #0d6efd 0%, #0ea5e9 100%); /* Degradê azul */
+      background: linear-gradient(135deg, #ff90f6 0%, #fd4cf4 100%); /* Degradê azul */
       color: #fff; /* Texto branco */
     }
 
     /* Título principal da hero */
     .hero-title {
-      font-size: 2.5rem; /* Tamanho do texto */
+      font-size: 3.3rem; /* Tamanho do texto */
       font-weight: 700;  /* Deixa bem negrito */
     }
 
@@ -59,11 +74,6 @@
       margin-bottom: 0.75rem;
     }
 
-    /* Seção de contato com leve destaque */
-    .section-highlight {
-      background-color: #e0f2fe; /* Azul bem claro */
-    }
-   
     /* WRAPPER DO VÍDEO DA VAN */
     .video-van-wrapper {
       text-align: left;          /* Centraliza acima do texto */
@@ -79,7 +89,7 @@
       height: auto;                /* Mantém proporção */
       border-radius: 16px;         /* Bordas arredondadas modernas */
       opacity: 0.98;               /* Integra com o fundo */
-      mix-blend-mode: screen;      /* FUNDAMENTAL: mistura com o degradê */
+      /*mix-blend-mode: screen;      /* FUNDAMENTAL: mistura com o degradê */
       filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.3)); /* Sombra bonita */
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
@@ -93,7 +103,7 @@
   /* === IMAGEM DA VAN INTEGRADA AO FUNDO === */
       .hero-image-wrapper {
         position: relative;           /* Permite controlar posicionamento */
-        max-width: 530px;             /* Tamanho ideal do hero */
+        max-width: 40%;             /* Tamanho ideal do hero */
         margin: auto;                 /* Centraliza em telas pequenas */
       }
 
@@ -104,7 +114,7 @@
         box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35); /* Sombra moderna */
         opacity: 0.99;                /* Leve transparência para mesclar com o fundo */
         backdrop-filter: blur(1px);   /* Integrar com o degradê */
-        mix-blend-mode: lighten;      /* FUNDAMENTAL: faz a imagem “misturar” com o fundo */
+        /*mix-blend-mode: soft-light;      /* FUNDAMENTAL: faz a imagem “misturar” com o fundo */
         transition: transform 0.3s ease, opacity 0.3s ease;
       }
 
@@ -132,6 +142,24 @@
           transition: transform 0.2s ease;
         }
     /* FIM - Imagem dos serviços na seção "Sobre" */    
+
+    .whatsapp-section {
+      padding: 4rem 0;
+      background-color: #e7fbe9; /* Verde bem leve */
+    }
+
+    .btn-whatsapp {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .btn-whatsapp:hover {
+      transform: scale(1.05);
+    }
 
 
     /* Rodapé simples */
