@@ -19,9 +19,10 @@
     <!-- container: centraliza conteúdo com largura máxima -->
     <div class="container">
       <!-- "Logo" simples, só texto por enquanto -->
-      <a class="navbar-brand fw-bold text-primary" href="#">
-        Tia<span class="text-info">Dani</span> <!-- Marca com duas cores -->
+      <a class="navbar-brand fw-bold logo-gradient" href="#">
+        TiaDani
       </a>
+
 
     <!-- Botão que aparece no mobile pra abrir/fechar o menu -->
 <button 
@@ -98,105 +99,65 @@
       </div>
     </div>
   </section>
-
-<section id="sobre" class="section-white">
+  <!-- SEÇÃO SOBRE NÓS -->
+   <section id="sobre-mapa" class="section-white py-5">
   <div class="container">
-    <div class="text-center mb-4">
+
+  <section id="sobre-mapa" class="section-white py-5">
+  <div class="container">
+
+    <!-- TÍTULO PRINCIPAL -->
+    <div class="text-center mb-5">
       <h2 class="fw-bold">Sobre o nosso transporte</h2>
-      <p class="text-muted">
-        Experiência, cuidado e compromisso com a segurança das crianças.
-      </p>
+      <p class="text-muted">Segurança, organização e rotas definidas com precisão.</p>
     </div>
 
-    <div class="row g-4">
+    <!-- CARDS -->
+    <div class="row g-4 mb-5">
       <div class="col-md-4">
         <div class="info-card text-center">
-          <!-- Imagem/ícone do serviço -->
-          <img 
-            src="/imagem/imagem 1.jpg" 
-            alt="Criança com cinto de segurança no transporte escolar" 
-            class="servico-img"
-          >
+          <img src="/imagem/imagem 1.jpg" class="servico-img" alt="Segurança">
           <h3>Segurança em primeiro lugar</h3>
-          <p class="mb-0">
-            Veículo revisado, cintos de segurança disponíveis e embarque em pontos seguros
-            próximos à escola e à residência.
-          </p>
+          <p>Veículo revisado, cintos de segurança e embarque em pontos seguros.</p>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="info-card text-center">
-          <img 
-            src="/imagem/imagem 2.jpg" 
-            alt="Responsável usando celular para falar com o transporte escolar" 
-            class="servico-img"
-          >
+          <img src="/imagem/imagem 2.jpg" class="servico-img" alt="Comunicação">
           <h3>Comunicação com os responsáveis</h3>
-          <p class="mb-0">
-            Avisos de chegada, atrasos e mudanças de rota enviados diretamente pelo WhatsApp.
-          </p>
+          <p>Avisos de chegada e recados enviados diretamente pelo WhatsApp.</p>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="info-card text-center">
-          <img 
-            src="/imagem/imagem 3.jpg" 
-            alt="Relógio representando pontualidade no transporte escolar" 
-            class="servico-img"
-          >
+          <img src="/imagem/imagem 3.jpg" class="servico-img" alt="Pontualidade">
           <h3>Pontualidade e organização</h3>
-          <p class="mb-0">
-            Rotas planejadas para reduzir atrasos e garantir que as crianças cheguem na hora certa.
-          </p>
+          <p>Rotas planejadas para garantir que as crianças cheguem no horário.</p>
         </div>
       </div>
     </div>
+
+    <!-- TÍTULO + TEXTO DA ÁREA DE ATENDIMENTO -->
+    <div class="text-center mb-4">
+      <h3 class="fw-bold">Rota</h3>
+      <p class="text-muted">Atendemos a região de Areia Branca e adjacências </p>
+    </div>
+
+    <!-- MAPA CENTRALIZADO -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=Areia%20Branca,%20Salvador%20-%20BA&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
   </div>
 </section>
 
-  <!-- SEÇÃO ROTAS / ÁREAS ATENDIDAS -->
-  <section id="rotas">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="fw-bold">Rotas e escolas atendidas</h2>
-        <p class="text-muted">
-          Verifique se já atendemos o seu bairro ou a escola do seu filho.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <!-- Card de rotas - você pode editar os bairros/escolas depois -->
-        <div class="col-md-6">
-          <div class="info-card">
-            <h3>Rotas matutinas</h3>
-            <ul class="mb-0">
-              <li>Bairro A → Escola X, Escola Y</li>
-              <li>Bairro B → Escola Z</li>
-              <li>Bairro C → Colégio Tal</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="info-card">
-            <h3>Rotas vespertinas</h3>
-            <ul class="mb-0">
-              <li>Bairro A → Escola X, Escola Y</li>
-              <li>Bairro D → Escola W</li>
-              <li>Bairro E → Colégio Exemplo</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Observação sobre possibilidade de novas rotas -->
-      <p class="mt-4 text-center text-muted">
-        <small>Não encontrou sua escola ou bairro? Preencha o formulário de contato que avaliaremos a possibilidade de incluir uma nova rota.</small>
-      </p>
-    </div>
-  </section>
 
   <!-- SEÇÃO CONTATO VIA WHATSAPP -->
  <section id="whatsapp" class="whatsapp-section">
@@ -223,9 +184,6 @@
       <!-- Texto simples de direitos autorais -->
       <p class="mb-1">&copy; 2025 TiaDani. Todos os direitos reservados.</p>
       <!-- Campo para informar cidade / região de atendimento -->
-      <p class="mb-0">
-        <small>Atendendo escolas e bairros selecionados da região. Entre em contato para confirmar disponibilidade.</small>
-      </p>
     </div>
   </footer>
 

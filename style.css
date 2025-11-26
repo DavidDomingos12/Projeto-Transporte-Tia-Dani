@@ -20,6 +20,18 @@
       }
     }
 
+    .logo-gradient {
+      background: linear-gradient(90deg, #ff4b8b, #ff77c8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent; /* deixa só o degradê aparecer */
+    }
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      letter-spacing: 0.03em;
+    }
+
     /* Seção principal (hero) da página */
     .hero {
       min-height: 70vh; /* Altura mínima: 70% da altura da tela */
@@ -161,6 +173,20 @@
       transform: scale(1.05);
     }
 
+        .map-container {
+      width: 100%;
+      display: flex;
+      justify-content: center; /* centraliza horizontalmente */
+    }
+
+    .map-container iframe {
+      width: 100%;
+      max-width: 1300px;        /* deixa o mapa elegante e centralizado */
+      height: 350px;
+      border: 0;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
 
     /* Rodapé simples */
     footer {
